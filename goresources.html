@@ -432,6 +432,22 @@
             margin-bottom: 60px;
         }
 
+        .resources-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .no-resources {
+            text-align: center;
+            color: #888;
+            font-size: 1.2rem;
+            padding: 60px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            margin: 40px auto;
+        }
+
         .resource-card {
             background: rgba(255, 255, 255, 0.03);
             border: 2px solid;
@@ -673,120 +689,11 @@
     <div class="main-content">
         <header class="page-header">
             <h1 class="page-title">Go Resources</h1>
-            <p class="page-subtitle">Master the ancient game of Go with our comprehensive collection of learning materials, strategies, and tools</p>
+            <p class="page-subtitle">Your comprehensive collection of Go learning materials and tools</p>
         </header>
 
-        <div class="resources-grid">
-            <div class="resource-card">
-                <span class="resource-icon">📖</span>
-                <h2 class="resource-title">Learning Materials</h2>
-                <p class="resource-description">Comprehensive guides, tutorials, and educational content for players of all skill levels</p>
-                
-                <div class="resource-links">
-                    <a href="https://online-go.com/learn" class="resource-link" target="_blank">Online-Go Learning</a>
-                    <a href="https://senseis.xmp.net/" class="resource-link" target="_blank">Sensei's Library</a>
-                    <a href="https://gobase.org/" class="resource-link" target="_blank">GoBase Database</a>
-                </div>
-                
-                <a href="#" class="cta-button">Explore Learning</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="resource-icon">🎯</span>
-                <h2 class="resource-title">Strategy & Tactics</h2>
-                <p class="resource-description">Advanced strategies, opening theory, and tactical patterns to improve your game</p>
-                
-                <div class="resource-links">
-                    <a href="https://online-go.com/puzzles" class="resource-link" target="_blank">Go Puzzles</a>
-                    <a href="https://goproblems.com/" class="resource-link" target="_blank">Go Problems</a>
-                    <a href="https://tsumego.tasuki.org/" class="resource-link" target="_blank">Tsumego Collection</a>
-                </div>
-                
-                <a href="#" class="cta-button">Study Strategy</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="resource-icon">🏆</span>
-                <h2 class="resource-title">Game Analysis</h2>
-                <p class="resource-description">Professional game reviews, AI analysis tools, and move-by-move breakdowns</p>
-                
-                <div class="resource-links">
-                    <a href="https://online-go.com/player/OGS" class="resource-link" target="_blank">OGS Game Records</a>
-                    <a href="https://gokifu.com/" class="resource-link" target="_blank">GoKifu Database</a>
-                    <a href="https://katrain.org/" class="resource-link" target="_blank">KaTrain AI</a>
-                </div>
-                
-                <a href="#" class="cta-button">Analyze Games</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="resource-icon">🌐</span>
-                <h2 class="resource-title">Online Platforms</h2>
-                <p class="resource-description">Best online Go servers and platforms for playing, learning, and competing</p>
-                
-                <div class="resource-links">
-                    <a href="https://online-go.com" class="resource-link" target="_blank">Online-Go.com</a>
-                    <a href="https://www.foxwq.com/" class="resource-link" target="_blank">Fox Go Server</a>
-                    <a href="https://www.tygem.com/" class="resource-link" target="_blank">Tygem</a>
-                </div>
-                
-                <a href="#" class="cta-button">Play Online</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="resource-icon">📱</span>
-                <h2 class="resource-title">Mobile Apps</h2>
-                <p class="resource-description">Essential Go apps for mobile devices to practice anywhere, anytime</p>
-                
-                <div class="resource-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.chess.go" class="resource-link" target="_blank">Go Free</a>
-                    <a href="https://apps.apple.com/us/app/go-free/id302866146" class="resource-link" target="_blank">Go Free iOS</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.chess.go" class="resource-link" target="_blank">Go Free Android</a>
-                </div>
-                
-                <a href="#" class="cta-button">Download Apps</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="resource-icon">📚</span>
-                <h2 class="resource-title">Books & Literature</h2>
-                <p class="resource-description">Classic Go literature, modern textbooks, and recommended reading lists</p>
-                
-                <div class="resource-links">
-                    <a href="https://www.amazon.com/s?k=go+game+books" class="resource-link" target="_blank">Amazon Go Books</a>
-                    <a href="https://www.goodreads.com/shelf/show/go-game" class="resource-link" target="_blank">Goodreads Go Books</a>
-                    <a href="https://www.barnesandnoble.com/s/go+game" class="resource-link" target="_blank">Barnes & Noble</a>
-                </div>
-                
-                <a href="#" class="cta-button">Browse Books</a>
-            </div>
-        </div>
-
-        <div class="collections-container" id="collectionsContainer">
-            <!-- Collections will be displayed here -->
-        </div>
-    </div>
-
-    <!-- Admin Modal -->
-    <div class="admin-modal" id="adminModal">
-        <div class="admin-content">
-            <h2 class="admin-title">Moderator Access</h2>
-            <input type="password" class="admin-input" id="adminPassword" placeholder="Enter password">
-            <button class="admin-submit" id="adminSubmit" onclick="checkPassword()">Submit</button>
-            <p id="throttleMessage" class="throttle-message" style="display: none;"></p>
-            <button class="admin-close" onclick="closeAdminModal()">Close</button>
-        </div>
-    </div>
-
-    <!-- Add Collection Modal -->
-    <div class="admin-modal" id="addCollectionModal">
-        <div class="admin-content">
-            <h2 class="admin-title">Add Collection</h2>
-            <input type="text" class="admin-input" id="collectionName" placeholder="Collection Name">
-            <input type="text" class="admin-input" id="collectionLink" placeholder="Collection Link">
-            <textarea class="admin-input" id="collectionDescription" placeholder="Collection Description (optional)" rows="3"></textarea>
-            <button class="admin-submit" onclick="addCollection()">Add Collection</button>
-            <button class="admin-close" onclick="closeAddCollectionModal()">Close</button>
+        <div class="resources-container" id="resourcesContainer">
+            <div class="no-resources">No resources available at the moment. Please check back later!</div>
         </div>
     </div>
 
@@ -926,21 +833,10 @@
                 }
             });
             
-            container.innerHTML = html;
+        function displayCollections() {
+            const container = document.getElementById('resourcesContainer');
+            container.innerHTML = '<div class="no-resources">No resources available at the moment. Please check back later!</div>';
         }
-
-        // Close modals when clicking outside
-        document.getElementById('adminModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeAdminModal();
-            }
-        });
-        
-        document.getElementById('addCollectionModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeAddCollectionModal();
-            }
-        });
 
         // Display collections on page load
         displayCollections();
