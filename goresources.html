@@ -817,22 +817,6 @@
                     // Full collection card with description
                     html += `
                         <div class="resource-card">
-                            <span class="resource-icon">📚</span>
-                            <h2 class="resource-title">${collection.name}</h2>
-                            <p class="resource-description">${collection.description}</p>
-                            <a href="${collection.link}" class="cta-button" target="_blank">View Collection</a>
-                        </div>
-                    `;
-                } else {
-                    // Small horizontal rectangle without description
-                    html += `
-                        <div class="collection-line">
-                            <a href="${collection.link}" class="collection-link" target="_blank">${collection.name}</a>
-                        </div>
-                    `;
-                }
-            });
-            
         function displayCollections() {
             const container = document.getElementById('resourcesContainer');
             container.innerHTML = '<div class="no-resources">No resources available at the moment. Please check back later!</div>';

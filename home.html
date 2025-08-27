@@ -326,6 +326,10 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 350px;
         }
 
         .feature-card::before {
@@ -373,6 +377,13 @@
             line-height: 1.7;
             font-size: 16px;
             margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .feature-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .cta-button {
@@ -539,44 +550,56 @@
 
         <div class="features-grid">
             <div class="feature-card">
-                <span class="feature-icon">🏆</span>
-                <h3 class="feature-title">Tournaments</h3>
-                <p class="feature-description">Participate in exciting tournaments and test your skills against players from around the world. Climb the rankings and prove your mastery of Go.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">🏆</span>
+                    <h3 class="feature-title">Tournaments</h3>
+                    <p class="feature-description">Participate in exciting tournaments and test your skills against players from around the world. Climb the rankings and prove your mastery of Go.</p>
+                </div>
                 <a href="tournaments.html" class="cta-button">Join Tournament</a>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">📅</span>
-                <h3 class="feature-title">Seasons</h3>
-                <p class="feature-description">Compete in seasonal leagues with structured progression systems. Track your improvement over time and earn seasonal rewards.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">📅</span>
+                    <h3 class="feature-title">Seasons</h3>
+                    <p class="feature-description">Compete in seasonal leagues with structured progression systems. Track your improvement over time and earn seasonal rewards.</p>
+                </div>
                 <a href="seasons.html" class="cta-button">View Seasons</a>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">📚</span>
-                <h3 class="feature-title">Go Resources</h3>
-                <p class="feature-description">Access comprehensive learning materials, strategies, and tutorials to improve your Go skills and understanding of the game.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">📚</span>
+                    <h3 class="feature-title">Go Resources</h3>
+                    <p class="feature-description">Access comprehensive learning materials, strategies, and tutorials to improve your Go skills and understanding of the game.</p>
+                </div>
                 <a href="goresources.html" class="cta-button">Learn More</a>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">📢</span>
-                <h3 class="feature-title">Announcement Center</h3>
-                <p class="feature-description">Stay updated with the latest news, tournament announcements, and community events happening in the PlanetGo universe.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">📢</span>
+                    <h3 class="feature-title">Announcement Center</h3>
+                    <p class="feature-description">Stay updated with the latest news, tournament announcements, and community events happening in the PlanetGo universe.</p>
+                </div>
                 <a href="announcementcenter.html" class="cta-button">View Updates</a>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">📰</span>
-                <h3 class="feature-title">News</h3>
-                <p class="feature-description">Read the latest Go news, player interviews, and insights from the competitive Go scene around the world.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">📰</span>
+                    <h3 class="feature-title">News</h3>
+                    <p class="feature-description">Read the latest Go news, player interviews, and insights from the competitive Go scene around the world.</p>
+                </div>
                 <a href="news.html" class="cta-button">Read News</a>
             </div>
 
             <div class="feature-card">
-                <span class="feature-icon">👨‍🏫</span>
-                <h3 class="feature-title">Tutor</h3>
-                <p class="feature-description">Get personalized coaching and guidance from experienced Go players to accelerate your learning journey and improve faster.</p>
+                <div class="feature-content">
+                    <span class="feature-icon">👨‍🏫</span>
+                    <h3 class="feature-title">Tutor</h3>
+                    <p class="feature-description">Get personalized coaching and guidance from experienced Go players to accelerate your learning journey and improve faster.</p>
+                </div>
                 <a href="tutor.html" class="cta-button">Find Tutor</a>
             </div>
         </div>
