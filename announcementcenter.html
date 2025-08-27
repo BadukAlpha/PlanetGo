@@ -318,6 +318,91 @@
             color: #d0d0d0;
         }
 
+        .info-card ol li {
+            margin-bottom: 10px;
+        }
+
+        .info-card ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+            color: #d0d0d0;
+        }
+
+        .info-card ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Tutorial Content Styles */
+        .tutorial-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .step-guide {
+            margin-top: 20px;
+        }
+
+        .step {
+            background: rgba(0, 255, 255, 0.1);
+            border-left: 4px solid #00ffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            color: #00ffff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .step ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .step li {
+            margin-bottom: 8px;
+            color: #d0d0d0;
+        }
+
+        .contact-info {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .contact-link {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-link:hover {
+            color: #FFA500;
+            text-decoration: underline;
+        }
+
+        .guidelines {
+            text-align: left;
+        }
+
+        .guidelines h3 {
+            color: #00ffff;
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+        }
+
+        .guidelines ul {
+            margin-bottom: 20px;
+        }
+
         .info-card li {
             margin-bottom: 10px;
             line-height: 1.6;
@@ -694,48 +779,78 @@
     <div class="main-content">
         <header class="page-header">
             <h1 class="page-title">Announcement Center</h1>
-            <p class="page-subtitle">How the announcement works: Users contact "BadukAlpha online" to upload their appropriate content</p>
+            <p class="page-subtitle">Learn how to get your news and announcements featured on PlanetGo</p>
         </header>
 
-        <div class="announcement-info">
+        <div class="tutorial-content">
             <div class="info-card">
-                <h2>📢 How Announcements Work</h2>
-                <p>To submit an announcement for the PlanetGo community:</p>
-                <ol>
-                    <li>Contact <strong>BadukAlpha</strong> on online-go.com</li>
-                    <li>Provide your announcement content (title, description, relevant links)</li>
-                    <li>Our moderators will review and approve appropriate submissions</li>
-                    <li>Approved announcements will appear in the News section</li>
-                </ol>
-                <p class="note">Note: All announcements are subject to moderation to ensure quality and relevance to the Go community.</p>
+                <h2>� How to Submit News for Publication</h2>
+                <p>Want to share news, events, or announcements with the PlanetGo community? Here's how to get your content featured in our News section:</p>
+                
+                <div class="step-guide">
+                    <div class="step">
+                        <h3>Step 1: Prepare Your Content</h3>
+                        <ul>
+                            <li><strong>Title:</strong> Create a clear, engaging headline</li>
+                            <li><strong>Description:</strong> Write a detailed explanation of your news/event</li>
+                            <li><strong>Links:</strong> Include any relevant websites, tournament pages, or resources</li>
+                            <li><strong>Images:</strong> Provide any relevant images or graphics (optional)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Step 2: Contact Our Moderators</h3>
+                        <p>Submit your content by contacting:</p>
+                        <div class="contact-info">
+                            <p><strong>Primary Contact:</strong> <a href="https://online-go.com/user/view/1824346" target="_blank" class="contact-link">BadukAlpha</a> on online-go.com</p>
+                            <p><em>Send a private message with your news submission</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>Step 3: Review Process</h3>
+                        <ul>
+                            <li>Our moderators will review your submission within 24-48 hours</li>
+                            <li>Content must be Go-related and appropriate for the community</li>
+                            <li>We may request minor edits or clarifications</li>
+                            <li>Once approved, your news will appear in the News section</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="announcements-container" id="announcementsContainer">
-            <!-- Dynamic announcements will be displayed here -->
-        </div>
-    </div>
+            <div class="info-card">
+                <h2>✅ Content Guidelines</h2>
+                <div class="guidelines">
+                    <h3>What We Accept:</h3>
+                    <ul>
+                        <li>Tournament announcements and results</li>
+                        <li>Go-related events and workshops</li>
+                        <li>Community achievements and milestones</li>
+                        <li>Educational content and resources</li>
+                        <li>Club and organization news</li>
+                    </ul>
+                    
+                    <h3>What We Don't Accept:</h3>
+                    <ul>
+                        <li>Commercial advertisements (unless community-relevant)</li>
+                        <li>Off-topic content unrelated to Go</li>
+                        <li>Inappropriate or offensive material</li>
+                        <li>Spam or repetitive submissions</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- Admin Modal -->
-    <div class="admin-modal" id="adminModal">
-        <div class="admin-content">
-            <h2 class="admin-title">Moderator Access</h2>
-            <input type="password" class="admin-input" id="adminPassword" placeholder="Enter password">
-            <button class="admin-submit" id="adminSubmit" onclick="checkPassword()">Submit</button>
-            <p id="throttleMessage" class="throttle-message" style="display: none;"></p>
-            <button class="admin-close" onclick="closeAdminModal()">Close</button>
-        </div>
-    </div>
-
-    <!-- Add Announcement Modal -->
-    <div class="admin-modal" id="addAnnouncementModal">
-        <div class="admin-content">
-            <h2 class="admin-title">Add Announcement</h2>
-            <input type="text" class="admin-input" id="announcementName" placeholder="Announcement Name">
-            <input type="text" class="admin-input" id="announcementLink" placeholder="Announcement Link">
-            <textarea class="admin-input" id="announcementDescription" placeholder="Announcement Description" rows="3"></textarea>
-            <button class="admin-submit" onclick="addAnnouncement()">Add Announcement</button>
-            <button class="admin-close" onclick="closeAddAnnouncementModal()">Close</button>
+            <div class="info-card">
+                <h2>💡 Tips for Better Submissions</h2>
+                <ul>
+                    <li><strong>Be Specific:</strong> Include dates, times, and locations for events</li>
+                    <li><strong>Add Context:</strong> Explain why this news matters to the Go community</li>
+                    <li><strong>Proofread:</strong> Check for spelling and grammar before submitting</li>
+                    <li><strong>Include Sources:</strong> Link to official websites or announcements</li>
+                    <li><strong>Be Patient:</strong> Allow time for the review process</li>
+                </ul>
+            </div>
         </div>
     </div>
 
